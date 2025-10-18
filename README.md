@@ -133,7 +133,3 @@ This README and the content in my repos are typically licensed under the MIT Lic
 
 *Thanks for stopping by — let’s build something awesome! 🚀*
 
-<!---
-xNima-Dev/xNima-Dev is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
