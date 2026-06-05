@@ -1,3 +1,10 @@
+## 🌍 Live Location Tracking Feature (Success!)
+Successfully integrated Google Maps SDK and Android Runtime Permissions. 
+The app now dynamically requests location access and centers the camera on the user's live location with the blue dot.
+
+### 🎥 Demo Video:
+https://github.com/user-attachments/assets/6481d225-d2a4-4cdc-83ec-5cb9cf6d65e3
+
 # xNIma-Dev 👋
 
 ---
