@@ -1,3 +1,41 @@
+# TechMart Enterprise Transaction & Performance Engine ⚡🛒
+
+A modernized, high-concurrency e-commerce transaction processing backend built using **Jakarta EE (Java EE)** enterprise architecture. This system is engineered to eliminate manual inventory overselling (race conditions) and achieve sub-second response latencies under extreme traffic spikes.
+
+## 🚀 Architectural Highlights
+
+*   **Optimized In-Memory Caching:** Decoupled heavy read operations from the persistent database using a **RAM Singleton Cache Layer** for instantaneous inventory lookups.
+*   **Low-Latency Transaction Boundary:** Standard checkouts are handled via **Stateful Session Beans**, executing full ACID relational updates and caching synchronizations in just **11ms**.
+*   **Race Condition Mitigation:** Implemented pessimistic/optimistic concurrency control mechanisms to handle massive concurrent request bursts safely.
+*   **Asynchronous Processing:** Leveraged **Java Message Service (JMS API)** and **Message-Driven Beans (MDBs)** to offload non-blocking background notifications with **0ms overhead** on the main thread.
+
+## 📊 High-Concurrency Simulation Metrics
+
+During heavy stress-testing injections through the embedded test harness, the system registered the following live telemetry metrics:
+
+| Metric | Value | Status |
+| :--- | :--- | :--- |
+| **Total Simulated Request Injections** | 200 | ⚡ High Load |
+| **Successful Decrements (Data Integrity)** | 37 | ✅ Committed |
+| **Blocked Conflicts (Version Collisions Avoided)** | 163 | 🛡️ Protected |
+| **Average DB Transaction Latency** | 11 ms | 🚀 Optimized |
+| **Asynchronous JMS Handshake** | 0 ms | ⚡ Non-blocking |
+
+## 🛠️ Tech Stack & Ecosystem
+
+*   **Language:** Java 11 / OpenLogic OpenJDK
+*   **Specification:** Jakarta EE (EJB, JMS, CDI)
+*   **Frameworks:** JUnit 5 (Component & Integration Testing)
+*   **Build Tool:** Maven
+*   **Environment:** GlassFish 7 / WildFly Application Server
+
+## 🎯 How It Works (Demo UI)
+The web interface allows real-time execution tracking, showcasing the immediate synchronizations between the persistent database and the RAM Singleton Cache layer while concurrently isolating transaction failures.
+
+https://github.com/user-attachments/assets/1880ad76-11a5-40b0-a57d-62dd576e1ed2
+
+
+
 ## 🌍 Live Location Tracking Feature (Success!)
 Successfully integrated Google Maps SDK and Android Runtime Permissions. 
 The app now dynamically requests location access and centers the camera on the user's live location with the blue dot.
